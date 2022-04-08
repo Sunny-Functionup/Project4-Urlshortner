@@ -9,14 +9,14 @@ const { promisify } = require("util");
 
 const redisClient = redis.createClient(
 
-    10386,
+    13689,
 
-    "redis-10386.c212.ap-south-1-1.ec2.cloud.redislabs.com",
+    "redis-13689.c212.ap-south-1-1.ec2.cloud.redislabs.com",
 
     { no_ready_check: true }
 );
 
-redisClient.auth("BPZINXNf82UMtUxBK2LwZyr38pcyFjNV", function (err) {
+redisClient.auth("NzZfQYl9JxmdHy7Wa2PtFqISnbNLlW10", function (err) {
 
     if (err) throw err;
 
@@ -82,7 +82,8 @@ try {
     }
 
     
-    const urlCode = nanoid.nanoid().toLowerCase();
+    const urlCode = nanoid.nanoid().toLowerCase();      
+
     const shortUrl = baseUrl + "/" + urlCode;
     shortUrl.toLowerCase();
 
