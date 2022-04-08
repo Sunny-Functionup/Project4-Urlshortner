@@ -135,6 +135,8 @@ try {
         return res.status(404).send({ status: false, Message: "No Url Found, Please Check Url Code", });
         }
         return res.status(302).redirect(isUrlExist.longUrl);
+    }else{
+        return res.status(404).send({ status: false, Message: "Short Url Not Found,Please prvode valid details", });
     }
 
 } catch (error) {
